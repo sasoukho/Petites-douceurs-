@@ -1,0 +1,627 @@
+/* Style du header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2e1f2;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #6a3d79;
+}
+
+/* Titre */
+.site-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #6a3d79;
+    margin: 0;
+}
+
+/* Bouton menu burger */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: #6a3d79;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+}
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f2e1f2;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
+}
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f2e1f2;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+/* 
+
+.nav-links li {
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6a3d79;
+    font-weight: bold;
+    display: block;
+}
+
+.nav-links a:hover {
+    color: #8e44ad;
+}
+
+/* Affichage du menu déroulant */
+nav.active .nav-links {
+    display: flex;
+}
+.nav-links {
+    z-index: 1000;
+}
+/* Section d'introduction */
+.intro {
+    text-align: center;
+    margin: 10px 0; /* Espace blanc au-dessus et en dessous */
+}
+
+/* Styles du header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2e1f2;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Titre centré */
+.site-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a3d79;
+}
+
+/* Bouton menu burger */
+#menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #6a3d79;
+}
+
+/* Menu déroulant caché */
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f2e1f2;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Afficher le menu lorsqu'il est actif */
+.nav-links.active {
+    display: block;
+}
+
+/* Style des liens */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6a3d79;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    background-color: #e0c4e0;
+    display: block;
+    padding: 10px;
+}
+
+/* Style du titre */
+.intro h2 {
+    font-family: 'Playfair Display', serif; /* Police élégante et lisible */
+    font-size: 26px;
+    color: #6a3d79; /* Mauve foncé */
+    font-weight: bold;
+}
+
+/* Section image + texte */
+.hero {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px; /* Largeur maximale pour bien centrer le contenu */
+}
+.hero img {
+    width: 100%; /* Ajuste la largeur pour qu'elle prenne toute la largeur du conteneur */
+    max-height: 400px; /* Ajuste cette valeur selon la hauteur souhaitée */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse son conteneur sans être déformée */
+    display: block; /* Évite les marges indésirables */
+    margin: 0 auto; /* Centre l'image si besoin */
+}
+
+/* Image grande taille sur écran large */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacement autour de l'image */
+}
+
+img {
+    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
+    height: auto;
+    border-radius: 5px; /* Optionnel : bords arrondis */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px; /* Largeur max pour éviter que l’image soit trop grande */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centrage de l’image avec un espace en bas */
+    border-radius: 10px; /* Bords arrondis pour un effet élégant */
+}
+
+/* Texte optimisé SEO */
+.text-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.hero-text {
+    font-size: 16px;
+    color: #444; /* Couleur douce et lisible */
+    line-height: 1.6; /* Espacement pour la lisibilité */
+    text-align: center;
+    font-weight: 400;
+}
+
+/* Conteneur du CTA */
+.cta-container {
+    text-align: center;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+/* Bouton CTA */
+.cta-button {
+    background-color: #D8BFD8; /* Mauve pastel */
+    color: #4B0082; /* Texte en indigo pour un bon contraste */
+    font-size: 18px;
+    font-family: 'Arial', sans-serif; /* Police lisible et élégante */
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.spacing {
+    height: 50px; /* Ajuste la hauteur selon le besoin */
+    width: 100%;
+}
+
+/* Effet au survol */
+.cta-button:hover {
+    background-color: #CDAFCD; /* Légèrement plus foncé au survol */
+}
+    
+    hr.separator {
+    border: none;  /* Supprime la bordure par défaut */
+    height: 2px;  /* Augmente un peu l'épaisseur pour la visibilité */
+        width: 50%;
+    background-color: black;  /* Ligne noire */
+    margin: 20px auto;  /* Ajuste l'espacement vertical */
+}
+.creations-title {
+    font-family: 'Dancing Script', cursive;  /* Police élégante */
+    font-size: 32px;  /* Taille du texte */
+    color: #6a3d79;  /* Mauve pastel */
+    text-align: center;  /* Centre le texte */
+    margin-bottom: 15px;  /* Espacement sous le titre */
+}
+.specialties h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #6a3d79; /* Mauve pastel */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.tabs-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #CDAFCD; /* Mauve clair */
+    color: #6a3d79; /* Mauve foncé */
+    border: 2px solid #6a3d79; 
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tab-button.active-tab {
+    background-color: #6a3d79; /* Mauve foncé */
+    color: white;
+}
+.italic-text {
+    font-style: italic;
+}
+.order-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacement entre les colonnes */
+    flex-wrap: wrap; /* Permet l'ajustement en responsive */
+}
+
+.step {
+    flex: 1; /* Pour que chaque élément prenne la même largeur */
+    min-width: 250px; /* Taille minimale pour éviter la surcharge */
+    text-align: center;
+}
+/* 
+/* 📌 Mise en page des contacts */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-item {
+    flex: 1;
+    min-width: 150px; /* Évite que les colonnes soient trop étroites */
+}
+
+/* 📱 Ajustement sur petits écrans */
+@media screen and (max-width: 600px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 📷 Style du logo Instagram */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.instagram-logo {
+    width: 50px;
+    height: auto;
+}
+/* 📌 Style du footer en bandeau */
+.footer {
+    background-color: #f2e1f2; /* 🌸 Couleur pastel */
+    padding: 15px 0;
+    color: #6a3d79;
+}
+
+/* 📌 Disposition en 3 colonnes */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* 📌 Alignement des éléments */
+.footer-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* 📌 Style du plan du site */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+.footer-links li {
+    margin: 3px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #6a3d79;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #8e44ad;
+}
+
+/* 📷 Logos Instagram et site */
+.footer-icon, .footer-logo {
+    width: 40px;
+    height: auto;
+}
+
+/* 📱 Version mobile : tout centré */
+@media screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+}
+
+/* 📌 Texte du bas */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: #e6d4e6;
+}
+body, p, h1, h2, h3, h4, h5, h6, span, a, li {
+    color: #6a3d79 !important;
+}
+
+/* 📌 Conteneur du formulaire */
+.reservation-form {
+    background-color: #f2e1f2; /* Fond mauve */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: "Arial", sans-serif;
+}
+
+/* 📌 Style des libellés */
+.reservation-form label {
+    font-weight: bold;
+    color: #5e356e;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 📌 Style des champs de saisie */
+.reservation-form input,
+.reservation-form textarea,
+.reservation-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d3a6d6;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #5e356e;
+}
+
+/* 📌 Style du calendrier */
+.reservation-form input[type="date"] {
+    cursor: pointer;
+}
+
+/* 📌 Style des boutons radio pour le nombre de parts */
+.reservation-form .parts-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.reservation-form .parts-options label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* 📌 Style des cases radio */
+.reservation-form input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* 📌 Style de la zone de texte */
+.reservation-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* 📌 Style du bouton de soumission */
+.reservation-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5e356e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.
+    
+    .help-box {
+    background-color: #f2e1f2; /* Couleur mauve clair */
+    color: #6a3d79; /* Texte mauve */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.help-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-box li {
+    margin: 5px 0;
+}
+
+.help-box a {
+    color: #6a3d79;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.help-box a:hover {
+    text-decoration: underline;
+}
+    
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2e1f2;
+    color: #6a3d79;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #6a3d79;
+}
+
+.review-form, .reviews {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #6a3d79;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5a2f63;
+}
+
+.stars label {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#avisContainer {
+    text-align: left;
+    padding: 10px;
+}
+
+.avis {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+    .stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label {
+    color: gold;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+    color: gold;
+}
+    
+    
