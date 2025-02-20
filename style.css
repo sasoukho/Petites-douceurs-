@@ -178,6 +178,19 @@ header {
     color: #6a3d79; /* Mauve foncé */
     font-weight: bold;
 }
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les images */
+    gap: 10px; /* Espacement entre les images */
+}
+
+.image-gallery img {
+    width: 150px; /* Ajuste la taille des images */
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    object-fit: cover; /* Ajuste le cadrage */
+}
 
 /* Section image + texte */
 .hero {
