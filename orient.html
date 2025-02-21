@@ -32,43 +32,91 @@
 
 <body>
 
-        <h1 class="title">Pâtisseries Orientales</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #5D3A8D;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #5D3A8D;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grid-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .grid-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #5D3A8D;
+        }
+    </style>
+        
     
+<section class="intro">
+    <h1>Pâtisseries Orientales</h1>
+</section>
+    
+<div class="spacing"></div>
 
-    <!-- Image principale -->
-    <section class="main-image">
-        <img src="Orientset.jpg" alt="Plateau de pâtisseries orientales">
-    </section>
-
-    <!-- Texte SEO en italique -->
-    <section class="description">
-        <p><em>Nos pâtisseries orientales sont un subtil mélange de tradition et de modernité, réalisées avec des ingrédients de haute qualité. Chaque bouchée vous transporte au cœur des saveurs envoûtantes du Maghreb, où la douceur du miel rencontre le croquant des fruits secs.</em></p>
-    </section>
-
-    <!-- Liste des pâtisseries en 2 colonnes -->
-    <section class="pastry-list">
-        <div class="pastry-item">
-            <img src="makrout.jpg" alt="Makrout">
-            <p>Makrout</p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="makrouts">
+            <p>Makrouts</p>
         </div>
-        <div class="pastry-item">
-            <img src="makroutlouz.jpg" alt="Makrout el Louz">
-            <p>Makrout el Louz</p>
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="Makrouts">
+            <p>Makrouts el louz</p>
         </div>
-        <div class="pastry-item">
-            <img src="baklawa.jpg" alt="Baklawa">
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="Baklawa">
             <p>Baklawa</p>
         </div>
-        <div class="pastry-item">
-            <img src="cornegazelle.jpg" alt="Corne de gazelle">
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="Boule de coco">
+            <p>Boule de coco</p>
+        </div>
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="Samsa">
+            <p>Samsas</p>
+        </div>
+        <div class="grid-item">
+            <img src="orientalu.jpg" alt="corne de gazelle">
             <p>Corne de gazelle</p>
         </div>
-        <div class="pastry-item">
-            <img src="samsa.jpg" alt="Samsa">
-            <p>Samsa</p>
-        </div>
-    </section>
+        
+    
+    </div>
 
+</body>
+    
 </body>
 </html>
 
