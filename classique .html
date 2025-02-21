@@ -12,88 +12,122 @@
 
  <header>
     <div class="logo">
-     <a href="index.html"class=logo-link">
-      <img src="logo.png" alt="Les Petites Douceurs" class="logo">
-     </a>
+        <img src="logo.png" alt="Logo">
     </div>
     <h1 class="site-title">Les Petites Douceurs</h1>
-    
+    </div>
     <button id="menu-toggle">&#9776;</button>
     <nav class="nav-links">
         <ul>
-            <li><a href="classique .html">Pâtisseries Classiques</a></li>
-            <li><a href="orient.html">Pâtisseries Orientales</a></li>
+            <li><a href="classiques.html">Pâtisseries Classiques</a></li>
+            <li><a href="orientales.html">Pâtisseries Orientales</a></li>
             <li><a href="booking.html">Réservation</a></li>
             <li><a href="about.html">À Propos</a></li>
            
         </ul>
     </nav>
 </header>
-
- <h1 class="classic-title">Pâtisseries</h1>
+        
     
-
-    <section class="classic-image">
-        <img src="Macaroncoc.jpg" alt="Pâtisseries Classiques">
-    </section>
-
-    <section class="classic-description">
-        <p>
-            <em>
-                Chaque création est confectionnée avec soin, à partir d’ingrédients sélectionnés pour leur qualité. 
-                Que vous soyez amateur de macarons, de cakes design ou d’entremets raffinés, vous trouverez ici des douceurs 
-                qui raviront vos papilles. Découvrez notre gamme et laissez-vous tenter par des desserts élégants et savoureux !
-            </em>
-        </p>
-    </section>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #5D3A8D;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #5D3A8D;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grid-item {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .grid-item p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #5D3A8D;
+        }
+    </style>
+</head>
+<body>
+<section class="intro">
+    <h2>Pâtisseries Classiques</h2>
+</section>
     
- <div class="spacing"></div>
+<div class="spacing"></div>
 
-    <section class="classic-list">
-        <div class="pastry-item">
-            <img src="macaron.jpg" alt="Macarons">
-            <p>Macarons</p>
-        </div>
-        <div class="pastry-item">
-            <img src="Macarons.jpg" alt="Macarons personnalisables">
-            <p>Macarons personnalisables</p>
-        </div>
-        <div class="pastry-item">
-            <img src="number.jpg" alt="Number Macarons">
-            <p>Number Macarons</p>
-        </div>
-        <div class="pastry-item">
-            <img src="camélia.jpg" alt="Cake Design">
-            <p>Cake Design</p>
-        </div>
-        <div class="pastry-item">
-            <img src="chocolat.jpg" alt="Entremet">
-            <p>Entremet</p>
-        </div>
-        <div class="pastry-item">
-            <img src="tartemirt.jpg" alt="Tartelettes">
-            <p>Tartelettes</p>
-        </div>
-        <div class="pastry-item">
-            <img src="cake.jpg" alt="Cakes">
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="cake.jpg" alt="cake">
             <p>Cakes</p>
         </div>
-        <div class="pastry-item">
-            <img src="Muffinframboise.jpg" alt="Muffins">
+        <div class="grid-item">
+            <img src="chocolat.jpg" alt="gâteau chocolat">
+            <p>Entremet au chocolat</p>
+        </div>
+        <div class="grid-item">
+            <img src="camélia.jpg" alt="cake design">
+            <p>Cake Design</p>
+        </div>
+        <div class="grid-item">
+            <img src="entremet" alt="entremet">
+            <p>Entremet ananas victoria coco</p>
+        </div>
+        <div class="grid-item">
+            <img src="macaron" alt="Macarons ">
+            <p>Macarons</p>
+        </div>
+        <div class="grid-item">
+            <img src="Macarons.jpg" alt="Macarons personnalisable">
+            <p>Macarons Personnalisable</p>
+        </div>
+        <div class="grid-item">
+            <img src="number.jpg" alt="Number cake ">
+            <p>Number macarons </p>
+        </div>
+        <div class="grid-item">
+            <img src="muffinframboise.jpg" alt="Muffins">
             <p>Muffins</p>
         </div>
-        <div class="pastry-item">
-            <img src="cagette.jpg" alt="Gâteaux Cagette">
-            <p>Gâteaux Cagette</p>
+        <div class="grid-item">
+            <img src="cagette.jpg" alt="cagette de fruits">
+            <p>Gâteau cagette</p>
         </div>
-        <div class="pastry-item">
-            <img src="indexp.jpg" alt="Pavlova">
-            <p>Pavlova</p>
+        <div class="grid-item">
+            <img src="tartemirt.jpg" alt="tarte mirtylle">
+            <p>Tartelettes</p>
         </div>
-    </section>
+    </div>
 
 </body>
-</html>
+
 <footer class="footer">
     <div class="footer-container">
         <!-- 📌 Colonne gauche : Instagram -->
