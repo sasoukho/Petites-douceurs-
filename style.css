@@ -178,24 +178,44 @@ header {
     color: #6a3d79; /* Mauve foncé */
     font-weight: bold;
 }
-.image-gallery {
+
+/* Section image + texte */
+.hero {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px; /* Largeur maximale pour bien centrer le contenu */
+}
+.hero img {
+    width: 100%; /* Ajuste la largeur pour qu'elle prenne toute la largeur du conteneur */
+    max-height: 400px; /* Ajuste cette valeur selon la hauteur souhaitée */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse son conteneur sans être déformée */
+    display: block; /* Évite les marges indésirables */
+    margin: 0 auto; /* Centre l'image si besoin */
+}
+
+/* Image grande taille sur écran large */
+.image-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centre les images */
-    gap: 20px; /* Espacement entre les images */
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacement autour de l'image */
 }
 
-.image-gallery img {
-    width: 250px; /* Augmente la taille des images */
+img {
+    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
     height: auto;
-    border-radius: 15px; /* Coins arrondis pour un effet plus élégant */
-    object-fit: cover; /* Ajuste le cadrage */
-    transition: transform 0.3s ease-in-out; /* Effet de zoom au survol */
+    border-radius: 5px; /* Optionnel : bords arrondis */
 }
 
-.image-gallery img:hover {
-    transform: scale(1.05); /* Zoom léger au survol */
+.hero-image {
+    width: 100%;
+    max-width: 800px; /* Largeur max pour éviter que l’image soit trop grande */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centrage de l’image avec un espace en bas */
+    border-radius: 10px; /* Bords arrondis pour un effet élégant */
 }
+
 /* Texte optimisé SEO */
 .text-container {
     max-width: 800px;
