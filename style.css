@@ -10,18 +10,20 @@ header {
 
 /* Logo */
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid #6a3d79;
 }
 
-/* Titre */
+/* Titre centré */
 .site-title {
     font-family: 'Dancing Script', cursive;
+    flex-grow: 1;
+    text-align: center;
     font-size: 24px;
+    font-weight: bold;
     color: #6a3d79;
-    margin: 0;
 }
 
 /* Bouton menu burger */
@@ -95,54 +97,6 @@ nav.active .nav-links {
     margin: 10px 0; /* Espace blanc au-dessus et en dessous */
 }
 
-/* Styles du header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f2e1f2;
-    padding: 10px 20px;
-    position: relative;
-}
-
-/* Logo */
-.logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-/* Titre centré */
-.site-title {
-    flex-grow: 1;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #6a3d79;
-}
-
-/* Bouton menu burger */
-#menu-toggle {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #6a3d79;
-}
-
-/* Menu déroulant caché */
-.nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #f2e1f2;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Afficher le menu lorsqu'il est actif */
 .nav-links.active {
     display: block;
@@ -193,6 +147,13 @@ header {
     margin: 0 auto; /* Centre l'image si besoin */
 }
 
+
+img {
+    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
+    height: auto;
+    border-radius: 5px; /* Optionnel : bords arrondis */
+}
+
 /* Mise en page des images en grille */
 .image-gallery {
     display: flex;
@@ -212,6 +173,21 @@ header {
     max-width: 300px; /* Taille max */
     height: auto;
     border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #c49ac0;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a3769b;
 }
 
 /* Texte optimisé SEO */
@@ -307,6 +283,36 @@ header {
     justify-content: space-between;
     gap: 20px; /* Espacement entre les colonnes */
     flex-wrap: wrap; /* Permet l'ajustement en responsive */
+}
+
+/* Centrer le bouton Passer commande */
+
+.cta-container {
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #c49ac0;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #a3769b;
 }
 
 .step {
