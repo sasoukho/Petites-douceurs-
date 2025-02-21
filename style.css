@@ -200,7 +200,7 @@ img {
 }
 
 .hero-text {
-    font-size: 16px;
+    font-size: 13px;
     color: #444; /* Couleur douce et lisible */
     line-height: 1.6; /* Espacement pour la lisibilité */
     text-align: center;
@@ -244,7 +244,7 @@ img {
 }
 .creations-title {
     font-family: 'Dancing Script', cursive;  /* Police élégante */
-    font-size: 32px;  /* Taille du texte */
+    font-size: 45px;  /* Taille du texte */
     color: #6a3d79;  /* Mauve pastel */
     text-align: center;  /* Centre le texte */
     margin-bottom: 15px;  /* Espacement sous le titre */
@@ -253,7 +253,7 @@ img {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     color: #6a3d79; /* Mauve pastel */
-    font-size: 32px;
+    font-size: 45px;
     margin-bottom: 20px;
 }
 .tabs-container {
@@ -627,42 +627,4 @@ button:hover {
 .stars label:hover ~ label {
     color: gold;
 }
-      /* Styles généraux pour le texte */
-body {
-    font-size: 16px; /* Taille de base pour mobile */
-}
-
-/* Ajustements pour écran large (desktop) */
-@media screen and (min-width: 1024px) {
-    body {
-        font-size: 14px; /* Réduction de la taille du texte */
-    }
-    h1 {
-        font-size: 28px;
-    }
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-    p {
-        font-size: 14px;
-    }
-    
-    /* Styles généraux des boutons */
-button, .cta {
-    font-size: 16px; /* Taille par défaut */
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
-/* Augmenter la taille des CTA sur desktop */
-@media screen and (min-width: 1024px) {
-    button, .cta {
-        font-size: 18px; /* Agrandir la police des CTA */
-        padding: 14px 28px; /* Augmenter le padding */
-    }
-}
-}  
-    
+      
