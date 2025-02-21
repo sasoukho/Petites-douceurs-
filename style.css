@@ -193,30 +193,26 @@ header {
     margin: 0 auto; /* Centre l'image si besoin */
 }
 
-/* Image grande taille sur écran large */
-.image-container {
+/* Mise en page des images en grille */
+.image-gallery {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 10px 0; /* Espacement autour de l'image */
+    gap: 15px;
 }
 
-img {
-    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image-row img {
+    width: 48%; /* Ajuste pour que les images tiennent dans une ligne */
+    max-width: 300px; /* Taille max */
     height: auto;
-    border-radius: 5px; /* Optionnel : bords arrondis */
+    border-radius: 10px;
 }
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0; /* Espacement autour de l'image */
-}
-
-img {
-    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
-    height
 
 /* Texte optimisé SEO */
 .text-container {
