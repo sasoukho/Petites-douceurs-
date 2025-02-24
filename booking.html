@@ -67,21 +67,7 @@ de<!DOCTYPE html>
             <!-- Bouton de soumission -->
             <button type="submit">Envoyer ma demande</button>
             <input type="hidden" name="_next" value="merci.html">
-            <script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Empêche le rechargement de la page
-        let form = this;
-
-        // Envoie les données du formulaire avec Fetch API
-        fetch(form.action, {
-            method: form.method,
-            body: new FormData(form)
-        }).then(response => {
-            // Redirige immédiatement après l'envoi
-            window.location.href = "merci.html";
-        }).catch(error => console.error("Erreur:", error));
-    });
-            </script>
+            
         </form>
     </main>
 
