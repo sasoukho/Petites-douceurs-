@@ -125,4 +125,11 @@ document.addEventListener("DOMContentLoaded", function () {
         afficherAvis();
         avisForm.reset();
     });
+    <script>
+  document.querySelector("form").addEventListener("submit", function() {
+    setTimeout(function(){
+      window.location.href = "merci.html";
+    }, 500); // Redirection après 0.5 seconde
+  });
+</script>
 });
