@@ -68,6 +68,34 @@
 
             <!-- Bouton de soumission -->
             <button type="submit">Envoyer ma demande</button>
+            <form action="https://formsubmit.co/shahinezee@gmail.com" method="POST">
+    <label for="name">Nom et Prénom :</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">E-mail :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Téléphone :</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="date">Date de retrait :</label>
+    <input type="date" id="date" name="date" required>
+
+    <label>Nombre de parts :</label>
+    <input type="radio" name="parts" value="2"> 2
+    <input type="radio" name="parts" value="4"> 4
+    <input type="radio" name="parts" value="6"> 6
+    <input type="radio" name="parts" value="8"> 8
+    <input type="radio" name="parts" value="10"> 10
+
+    <label for="message">Description :</label>
+    <textarea id="message" name="message" placeholder="Indiquez les parfums, le design souhaité, etc."></textarea>
+
+    <input type="hidden" name="_next" value="merci.html">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Envoyer la réservation</button>
+            </form>
         </form>
     </main>
 
