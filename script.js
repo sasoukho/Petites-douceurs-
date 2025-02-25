@@ -133,3 +133,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const formAvis = document.getElementById("avis-form");
+    const avisContainer = document.getElementById("avis-liste");
+
+    // Charger les avis enregistrés
+    function chargerAvis() {
+        let avisStockes = JSON.parse(localStorage.getItem("avis")) || [];
+        avisContainer.innerHTML = "";
+        avisStockes.forEach(avis => {
+            const div = document.createElement("div");
+            div.classList.add("avis-item");
+            div.innerHTML = `
+                <p><strong>${avis.nom}</strong> - ${"⭐".repeat(avis.etoiles)}</p>
+                <p>${avis.commentaire}</p>
+                <hr>
+            `;
+            avisContainer.appendChild(div);
+        });
+    }
+
+    formAvis.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nom = document.getElementById("nom").value;
+        const etoiles = document.querySelector("input[name='etoiles']:checked").value;
+        const commentaire = document.getElementById("commentaire").value;
+
+        if (nom && etoiles && commentaire) {
+            let avisStockes = JSON.parse(localStorage.getItem("avis")) || [];
+            avisStockes.push({ nom, etoiles, commentaire });
+            localStorage.setItem("avis", JSON.stringify(avisStockes));
+
+            formAvis.reset();
+            chargerAvis();
+        } else {
+            alert("Merci de remplir tous les champs.");
+        }
+    });
+
+    chargerAvis();
+});
