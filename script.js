@@ -84,93 +84,57 @@ document.addEventListener("DOMContentLoaded", function () {
     const avisContainer = document.getElementById("avisContainer");
 
     // Charger les avis enregistrés
-    let avisList = JSON.parse(localStorage.getItem("avis")) || [];
+    document.addEventListener("DOMContentLoaded", function () {
+    const avisForm = document.getElementById("avisForm");
+    const avisContainer = document.getElementById("listeAvis");
 
-    function afficherAvis() {
+    // Charger les avis stockés
+    function chargerAvis() {
+        let avisList = JSON.parse(localStorage.getItem("avis")) || [];
         avisContainer.innerHTML = "";
+
         if (avisList.length === 0) {
             avisContainer.innerHTML = "<p>Aucun avis pour le moment.</p>";
-        } else {
-            avisList.forEach(avis => {
-                const avisElement = document.createElement("div");
-                avisElement.classList.add("avis");
-                avisElement.innerHTML = `
-                    <p><strong>${avis.nom}</strong> (${avis.note}⭐)</p>
-                    <p>${avis.commentaire}</p>
-                `;
-                avisContainer.appendChild(avisElement);
-            });
+            return;
         }
+
+        avisList.forEach(avis => {
+            const avisElement = document.createElement("div");
+            avisElement.classList.add("avis-item");
+            avisElement.innerHTML = `
+                <p><strong>${avis.nom}</strong> - ${"⭐".repeat(avis.note)}</p>
+                <p>${avis.commentaire}</p>
+                <hr>
+            `;
+            avisContainer.appendChild(avisElement);
+        });
     }
 
-    afficherAvis();
+    chargerAvis(); // Afficher les avis au chargement
 
-    // Soumission du formulaire
+    // Gestion de l'envoi du formulaire
     avisForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const nom = document.getElementById("nom").value;
-        const note = document.querySelector('input[name="note"]:checked')?.value || "0";
-        const commentaire = document.getElementById("commentaire").value;
+        const nom = document.getElementById("nom").value.trim();
+        const noteInput = document.querySelector('input[name="note"]:checked');
+        const commentaire = document.getElementById("commentaire").value.trim();
 
-        if (!nom || note === "0" || !commentaire) {
+        if (!nom || !noteInput || !commentaire) {
             alert("Veuillez remplir tous les champs !");
             return;
         }
 
+        const note = parseInt(noteInput.value);
+
         const nouvelAvis = { nom, note, commentaire };
-        avisList.unshift(nouvelAvis);
+
+        // Récupérer les avis existants et ajouter le nouveau
+        let avisList = JSON.parse(localStorage.getItem("avis")) || [];
+        avisList.unshift(nouvelAvis); // Ajoute au début du tableau
         localStorage.setItem("avis", JSON.stringify(avisList));
 
-        afficherAvis();
-        avisForm.reset();
+        chargerAvis(); // Met à jour l'affichage
+        avisForm.reset(); // Réinitialiser le formulaire
     });
-    <script>
-  document.querySelector("form").addEventListener("submit", function() {
-    setTimeout(function(){
-      window.location.href = "merci.html";
-    }, 500); // Redirection après 0.5 seconde
-  });
-</script>
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const formAvis = document.getElementById("avis-form");
-    const avisContainer = document.getElementById("avis-liste");
-
-    // Charger les avis enregistrés
-    function chargerAvis() {
-        let avisStockes = JSON.parse(localStorage.getItem("avis")) || [];
-        avisContainer.innerHTML = "";
-        avisStockes.forEach(avis => {
-            const div = document.createElement("div");
-            div.classList.add("avis-item");
-            div.innerHTML = `
-                <p><strong>${avis.nom}</strong> - ${"⭐".repeat(avis.etoiles)}</p>
-                <p>${avis.commentaire}</p>
-                <hr>
-            `;
-            avisContainer.appendChild(div);
-        });
-    }
-
-    formAvis.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const nom = document.getElementById("nom").value;
-        const etoiles = document.querySelector("input[name='etoiles']:checked").value;
-        const commentaire = document.getElementById("commentaire").value;
-
-        if (nom && etoiles && commentaire) {
-            let avisStockes = JSON.parse(localStorage.getItem("avis")) || [];
-            avisStockes.push({ nom, etoiles, commentaire });
-            localStorage.setItem("avis", JSON.stringify(avisStockes));
-
-            formAvis.reset();
-            chargerAvis();
-        } else {
-            alert("Merci de remplir tous les champs.");
-        }
-    });
-
-    chargerAvis();
 });
