@@ -99,3 +99,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     afficherAvis();
 });
+    document.addEventListener("DOMContentLoaded", function () {
+    const avisForm = document.querySelector("#avisForm");
+    const avisContainer = document.querySelector("#listeAvis");
+
+    if (!avisForm || !avisContainer) {
+        alert("Erreur : avisForm ou listeAvis introuvable !");
+        return;
+    }
+
+    // ✅ Vérification des données saisies
+    avisForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nom = document.querySelector("#nom").value.trim();
+        const noteInput = document.querySelector('input[name="note"]:checked');
+        const commentaire = document.querySelector("#commentaire").value.trim();
+
+        if (!nom || !noteInput || !commentaire) {
+            alert("Veuillez remplir tous les champs !");
+            return;
+        }
+
+        const note = parseInt(noteInput.value);
+        alert(`✅ Avis soumis : ${nom}, Note: ${note}, Commentaire: ${commentaire}`);
+
+        // 🔴 Tester si l'avis est bien ajouté à la liste
+        avisContainer.innerHTML += `
+            <div class="avis-item">
+                <p><strong>${nom}</strong> - ${"⭐".repeat(note)}</p>
+                <p>${commentaire}</p>
+                <hr>
+            </div>
+        `;
+        alert("Avis ajouté visuellement sur la page !");
+    });
+});
