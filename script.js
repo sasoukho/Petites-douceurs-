@@ -37,11 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const avisContainer = document.querySelector("#listeAvis");
 
     if (!avisForm || !avisContainer) {
-        alert("Erreur : avisForm ou listeAvis introuvable !");
-        return;
+        console.warn("⚠️ Cette page ne contient pas de formulaire d'avis. Script ignoré.");
+        return; // Sortie du script si pas sur la bonne page
     }
 
-    // ✅ Vérification des données saisies
+    console.log("✅ Formulaire d'avis détecté, script chargé correctement.");
+
+    // ✅ Gestion de la soumission du formulaire
     avisForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -55,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const note = parseInt(noteInput.value);
-        alert(`✅ Avis ajouté : ${nom}, Note: ${note}, Commentaire: ${commentaire}`);
+        console.log(`✅ Nouvel avis soumis : ${nom}, Note: ${note}, Commentaire: ${commentaire}`);
 
-        // ✅ Ajout de l'avis dans la liste des avis affichés
+        // 🔴 Ajout immédiat de l'avis
         const nouvelAvis = document.createElement("div");
         nouvelAvis.classList.add("avis-item");
         nouvelAvis.innerHTML = `
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         avisContainer.prepend(nouvelAvis);
 
-        // ✅ Sauvegarde dans le localStorage
+        // 🔴 Sauvegarde dans localStorage
         let avisList = JSON.parse(localStorage.getItem("avis")) || [];
         avisList.unshift({ nom, note, commentaire });
         localStorage.setItem("avis", JSON.stringify(avisList));
@@ -76,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         avisForm.reset();
     });
 
-    // ✅ Affichage des avis au chargement
+    // ✅ Chargement des avis stockés
     function afficherAvis() {
         let avisList = JSON.parse(localStorage.getItem("avis")) || [];
         avisContainer.innerHTML = avisList.length === 0 ? "<p>Aucun avis pour le moment.</p>" : "";
@@ -91,21 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             avisContainer.appendChild(avisElement);
         });
+
+        console.log("✅ Avis chargés avec succès !");
     }
 
-    afficherAvis(); // Charge les avis enregistrés au démarrage
-});
-
-alert("JavaScript chargé !");
-document.addEventListener("DOMContentLoaded", function () {
-    const avisForm = document.querySelector("#avisForm");
-
-    if (avisForm) {
-        avisForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Le bouton de soumission fonctionne !");
-        });
-    } else {
-        alert("ERREUR : avisForm introuvable !");
-    }
+    afficherAvis();
 });
