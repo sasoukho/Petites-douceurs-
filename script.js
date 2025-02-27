@@ -135,3 +135,4 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Avis ajouté visuellement sur la page !");
     });
 });
+    console.log("Avis stockés : ", JSON.parse(localStorage.getItem("avis")));
