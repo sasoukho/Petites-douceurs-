@@ -93,3 +93,8 @@ header {
     list-style: none;
     padding: 5px 0;
 }
+#listeAvis {
+    display: block !important;
+    text-align: left;
+    padding: 10px;
+}
