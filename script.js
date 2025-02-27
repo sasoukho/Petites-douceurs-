@@ -85,9 +85,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 alert("JavaScript chargé !");
 document.addEventListener("DOMContentLoaded", function () {
-    const avisContainer = document.getElementById("listeAvis");
+    const avisForm = document.querySelector("#avisForm");
 
-    if (avisContainer) {
-        avisContainer.innerHTML = "<p style='color: red;'>Test d'affichage d'un avis</p>";
+    if (avisForm) {
+        avisForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Le bouton de soumission fonctionne !");
+        });
+    } else {
+        alert("ERREUR : avisForm introuvable !");
     }
 });
