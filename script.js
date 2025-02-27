@@ -84,3 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 alert("JavaScript chargé !");
+document.addEventListener("DOMContentLoaded", function () {
+    const avisContainer = document.getElementById("listeAvis");
+
+    if (avisContainer) {
+        avisContainer.innerHTML = "<p style='color: red;'>Test d'affichage d'un avis</p>";
+    }
+});
