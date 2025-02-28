@@ -200,6 +200,63 @@ img {
 .cta-button:hover {
     background-color: #CDAFCD;
 }
+/* ✅ Images générales */
+img {
+    max-width: 100%;
+    height: auto; /* Maintenir le ratio */
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px; /* Optionnel : arrondi léger */
+}
+
+/* ✅ Conteneur des images dans la section "Nos créations" */
+.creations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les images */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.creations-container img {
+    width: calc(50% - 20px); /* Deux images par ligne */
+    max-height: 300px; /* Ajuster la hauteur */
+    object-fit: cover; /* Ajuster sans distorsion */
+}
+
+/* ✅ Conteneur des images dans la section "Nos spécialités" */
+.specialties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacement entre les éléments */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.specialty {
+    width: calc(50% - 20px); /* Chaque élément prend la moitié de l'espace */
+    text-align: center;
+}
+
+.specialty img {
+    width: 100%;
+    max-height: 250px; /* Ajuste la hauteur pour uniformiser */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ✅ Adapter les images pour mobile */
+@media screen and (max-width: 768px) {
+    .creations-container img,
+    .specialty {
+        width: 100%; /* Une seule image par ligne sur mobile */
+    }
+}
 
 /* ✅ Footer */
 .footer {
