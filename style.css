@@ -6,12 +6,22 @@ header {
     background-color: #f2e1f2;
     padding: 10px 20px;
     position: relative;
+    width: 100%;
+}
+
+/* ✅ Fond du site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fond blanc */
+    color: #6a3d79;
+    text-align: center;
+    padding: 20px;
 }
 
 /* ✅ Logo */
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid #6a3d79;
     cursor: pointer; /* Permet de cliquer sur le logo */
@@ -27,7 +37,7 @@ header {
     text-align: center;
 }
 
-/* ✅ Bouton menu burger */
+/* ✅ Menu burger */
 #menu-toggle {
     font-size: 24px;
     cursor: pointer;
@@ -56,7 +66,7 @@ header {
     flex-direction: column;
 }
 
-/* ✅ Style des liens du menu */
+/* ✅ Liens du menu */
 .nav-links ul {
     list-style: none;
     padding: 0;
@@ -80,79 +90,58 @@ header {
     padding: 10px;
 }
 
-/* ✅ Contenu général */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2e1f2;
-    color: #6a3d79;
-    text-align: center;
-    padding: 20px;
-}
-
-/* ✅ Section introduction */
-.intro {
-    text-align: center;
-    margin: 10px 0;
-}
-
-/* ✅ Titre des sections */
-.intro h2,
-.specialties h2 {
+/* ✅ Titre "Pâtisserie Unique et Raffinée" avec la même police que "Nos Créations" */
+.titre-special {
     font-family: 'Dancing Script', cursive;
     font-size: 32px;
     color: #6a3d79;
     margin-bottom: 20px;
 }
 
-/* ✅ Hero section */
-.hero {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 900px;
-}
-
-.hero img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
-
-/* ✅ Mise en page des images */
-.image-container {
+/* ✅ Nos Créations : images en ligne */
+.nos-creations {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 10px 0;
+    gap: 20px;
+    flex-wrap: wrap; /* S'ajuste si l'écran est petit */
+    margin-bottom: 20px;
 }
 
-img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 5px;
+.nos-creations img {
+    width: 45%;
+    max-width: 300px;
+    border-radius: 10px;
 }
 
-/* ✅ Texte optimisé SEO */
-.text-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    font-size: 1.2em;
-    line-height: 1.5;
+/* ✅ Nos Spécialités : images et boutons sous chaque image */
+.nos-specialites {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* ✅ CTA (Bouton d'appel à l'action) */
-.cta-container {
+.specialite {
     text-align: center;
-    margin-top: 20px;
+    max-width: 300px;
 }
 
+.specialite img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.specialite .cta-button {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ✅ Boutons CTA */
 .cta-button {
     background-color: #D8BFD8;
     color: #4B0082;
-    font-size: 18px;
-    padding: 12px 24px;
+    font-size: 16px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -162,85 +151,26 @@ img {
     background-color: #CDAFCD;
 }
 
-/* ✅ Séparateur */
-hr.separator {
-    border: none;
-    height: 2px;
-    width: 50%;
-    background-color: black;
-    margin: 20px auto;
-}
-
-/* ✅ Onglets (Tabs) */
-.tabs-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #CDAFCD;
-    color: #6a3d79;
-    border: 2px solid #6a3d79;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.tab-button.active-tab {
-    background-color: #6a3d79;
-    color: white;
-}
-
-/* ✅ Témoignages et avis */
-#avisContainer {
-    text-align: left;
-    padding: 10px;
-}
-
-.avis-item {
-    background: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.avis-item p {
-    margin: 5px 0;
-}
-
-.stars {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
-
-.stars input {
-    display: none;
-}
-
-.stars label {
-    font-size: 25px;
-    color: #ccc;
-    cursor: pointer;
-}
-
-.stars input:checked ~ label {
-    color: gold;
-}
-
-.stars label:hover,
-.stars label:hover ~ label {
-    color: gold;
-}
-
 /* ✅ Footer */
 .footer {
     background-color: #f2e1f2;
     padding: 15px 0;
     color: #6a3d79;
     text-align: center;
+}
+
+/* ✅ Footer : réduction de la taille des logos */
+.footer .footer-logo,
+.footer .footer-icon {
+    width: 30px; /* Plus petit */
+    height: auto;
+}
+
+/* ✅ Logo Instagram plus petit en bas de page */
+.social-media .instagram-logo {
+    width: 30px; /* Plus petit */
+    height: auto;
+    margin-top: 10px;
 }
 
 /* ✅ Disposition en 3 colonnes */
@@ -274,8 +204,17 @@ hr.separator {
     color: #8e44ad;
 }
 
-/* ✅ Version mobile : centrer */
+/* ✅ Responsive : ajustement sur mobiles */
 @media screen and (max-width: 600px) {
+    .nos-creations {
+        flex-direction: column;
+    }
+
+    .nos-specialites {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -284,55 +223,4 @@ hr.separator {
     .footer-links {
         text-align: center;
     }
-}
-
-/* ✅ Texte du bas */
-.footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    padding: 10px 0;
-    background-color: #e6d4e6;
-}
-
-/* ✅ Conteneur du formulaire */
-.reservation-form {
-    background-color: #f2e1f2;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-/* ✅ Champs de formulaire */
-.reservation-form input,
-.reservation-form textarea,
-.reservation-form select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #d3a6d6;
-    font-size: 16px;
-    background-color: #fff;
-    color: #5e356e;
-}
-
-/* ✅ Style du bouton de soumission */
-.reservation-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #5e356e;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-/* ✅ Aide */
-.help-box {
-    background-color: #f2e1f2;
-    color: #6a3d79;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
 }
