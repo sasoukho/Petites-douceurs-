@@ -90,6 +90,36 @@ body {
     padding: 10px;
 }
 
+.hero img {
+    width: 100%; /* Ajuste la largeur pour qu'elle prenne toute la largeur du conteneur */
+    max-height: 400px; /* Ajuste cette valeur selon la hauteur souhaitée */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse son conteneur sans être déformée */
+    display: block; /* Évite les marges indésirables */
+    margin: 0 auto; /* Centre l'image si besoin */
+}
+
+/* Image grande taille sur écran large */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacement autour de l'image */
+}
+
+img {
+    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
+    height: auto;
+    border-radius: 5px; /* Optionnel : bords arrondis */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px; /* Largeur max pour éviter que l’image soit trop grande */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centrage de l’image avec un espace en bas */
+    border-radius: 10px; /* Bords arrondis pour un effet élégant */
+}
 /* ✅ Titre "Pâtisserie Unique et Raffinée" avec la même police que "Nos Créations" */
 .titre-special {
     font-family: 'Dancing Script', cursive;
