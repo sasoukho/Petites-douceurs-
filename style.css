@@ -30,7 +30,7 @@ body {
 /* ✅ Titre */
 .site-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 24px;
+    font-size: 32px;
     color: #6a3d79;
     margin: 0;
     flex-grow: 1;
@@ -98,36 +98,41 @@ body {
     margin-bottom: 20px;
 }
 
-/* ✅ Nos Créations : images en ligne */
+/* ✅ Nos Créations : images parfaitement alignées */
 .nos-creations {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap; /* S'ajuste si l'écran est petit */
     margin-bottom: 20px;
 }
 
 .nos-creations img {
-    width: 45%;
+    width: 48%;
     max-width: 300px;
+    height: 250px;
+    object-fit: cover; /* Recadre parfaitement sans déformer */
     border-radius: 10px;
 }
 
-/* ✅ Nos Spécialités : images et boutons sous chaque image */
+/* ✅ Nos Spécialités : images en ligne avec boutons sous chaque image */
 .nos-specialites {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .specialite {
     text-align: center;
+    width: 48%;
     max-width: 300px;
 }
 
 .specialite img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -162,13 +167,13 @@ body {
 /* ✅ Footer : réduction de la taille des logos */
 .footer .footer-logo,
 .footer .footer-icon {
-    width: 30px; /* Plus petit */
+    width: 25px; /* Plus petit */
     height: auto;
 }
 
 /* ✅ Logo Instagram plus petit en bas de page */
 .social-media .instagram-logo {
-    width: 30px; /* Plus petit */
+    width: 25px; /* Plus petit */
     height: auto;
     margin-top: 10px;
 }
@@ -206,13 +211,14 @@ body {
 
 /* ✅ Responsive : ajustement sur mobiles */
 @media screen and (max-width: 600px) {
-    .nos-creations {
-        flex-direction: column;
-    }
-
+    .nos-creations,
     .nos-specialites {
         flex-direction: column;
         align-items: center;
+    }
+
+    .specialite {
+        width: 100%;
     }
 
     .footer-container {
