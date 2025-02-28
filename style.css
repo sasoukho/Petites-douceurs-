@@ -98,24 +98,25 @@ body {
     margin-bottom: 20px;
 }
 
-/* ✅ Nos Créations : images parfaitement alignées */
+/* ✅ Nos Créations : images côte à côte */
 .nos-creations {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* S'ajuste si l'écran est petit */
+    flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
     margin-bottom: 20px;
 }
 
 .nos-creations img {
-    width: 48%;
-    max-width: 300px;
-    height: 250px;
-    object-fit: cover; /* Recadre parfaitement sans déformer */
+    width: 48%; /* Chaque image prend environ la moitié de l'écran */
+    max-width: 300px; /* Taille max pour éviter les images trop grandes */
+    height: auto;
+    aspect-ratio: 4/3; /* Garde un ratio harmonieux */
+    object-fit: cover; /* Coupe l'image pour éviter la déformation */
     border-radius: 10px;
 }
 
-/* ✅ Nos Spécialités : images en ligne avec boutons sous chaque image */
+/* ✅ Nos Spécialités : images côte à côte avec boutons en dessous */
 .nos-specialites {
     display: flex;
     justify-content: center;
@@ -131,9 +132,23 @@ body {
 
 .specialite img {
     width: 100%;
-    height: 250px;
+    height: auto;
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/* ✅ Responsive : ajuste les images en colonne sur petits écrans */
+@media screen and (max-width: 600px) {
+    .nos-creations, .nos-specialites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nos-creations img, .specialite {
+        width: 90%; /* Plus grand sur petits écrans */
+        max-width: 350px; /* Evite d'être trop large */
+    }
 }
 
 .specialite .cta-button {
