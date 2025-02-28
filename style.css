@@ -7,6 +7,340 @@ header {
     padding: 10px 20px;
     position: relative;
     width: 100%;
+    .nav-links {
+    display: none !important;
+}
+
+.nav-links.active {
+    display: block !important;
+}
+}
+
+/* ✅ Fond du site */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Fond blanc */
+    color: #6a3d79;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ✅ Logo */
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #6a3d79;
+    cursor: pointer; /* Permet de cliquer sur le logo */
+}
+
+/* ✅ Titre */
+.site-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #6a3d79;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* ✅ Menu burger */
+#menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #6a3d79;
+}
+
+/* ✅ Navigation */
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f2e1f2;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* ✅ Affichage du menu lorsqu'il est actif */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ Liens du menu */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6a3d79;
+    font-weight: bold;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: #e0c4e0;
+    display: block;
+    padding: 10px;
+}
+
+.hero img {
+    width: 100%; /* Ajuste la largeur pour qu'elle prenne toute la largeur du conteneur */
+    max-height: 400px; /* Ajuste cette valeur selon la hauteur souhaitée */
+    object-fit: cover; /* Ajuste l'image pour qu'elle remplisse son conteneur sans être déformée */
+    display: block; /* Évite les marges indésirables */
+    margin: 0 auto; /* Centre l'image si besoin */
+}
+
+/* Image grande taille sur écran large */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Espacement autour de l'image */
+}
+
+img {
+    max-width: 80%; /* L'image prendra maximum 80% de la largeur */
+    height: auto;
+    border-radius: 5px; /* Optionnel : bords arrondis */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px; /* Largeur max pour éviter que l’image soit trop grande */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centrage de l’image avec un espace en bas */
+    border-radius: 10px; /* Bords arrondis pour un effet élégant */
+}
+/* ✅ Titre "Pâtisserie Unique et Raffinée" avec la même police que "Nos Créations" */
+.titre-special {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    color: #6a3d79;
+    margin-bottom: 20px;
+}
+
+/* ✅ Nos Créations : images côte à côte */
+.nos-creations {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Permet de s'adapter aux petits écrans */
+    margin-bottom: 20px;
+}
+
+.nos-creations img {
+    width: 48%; /* Chaque image prend environ la moitié de l'écran */
+    max-width: 300px; /* Taille max pour éviter les images trop grandes */
+    height: auto;
+    aspect-ratio: 4/3; /* Garde un ratio harmonieux */
+    object-fit: cover; /* Coupe l'image pour éviter la déformation */
+    border-radius: 10px;
+}
+
+/* ✅ Nos Spécialités : images côte à côte avec boutons en dessous */
+.nos-specialites {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.specialite {
+    text-align: center;
+    width: 48%;
+    max-width: 300px;
+}
+
+.specialite img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ✅ Responsive : ajuste les images en colonne sur petits écrans */
+@media screen and (max-width: 600px) {
+    .nos-creations, .nos-specialites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nos-creations img, .specialite {
+        width: 90%; /* Plus grand sur petits écrans */
+        max-width: 350px; /* Evite d'être trop large */
+    }
+}
+
+.specialite .cta-button {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ✅ Boutons CTA */
+.cta-button {
+    background-color: #D8BFD8;
+    color: #4B0082;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #CDAFCD;
+}
+/* ✅ Images générales */
+img {
+    max-width: 100%;
+    height: auto; /* Maintenir le ratio */
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px; /* Optionnel : arrondi léger */
+}
+
+/* ✅ Conteneur des images dans la section "Nos créations" */
+.creations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les images */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.creations-container img {
+    width: calc(50% - 20px); /* Deux images par ligne */
+    max-height: 300px; /* Ajuster la hauteur */
+    object-fit: cover; /* Ajuster sans distorsion */
+}
+
+/* ✅ Conteneur des images dans la section "Nos spécialités" */
+.specialties-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacement entre les éléments */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.specialty {
+    width: calc(50% - 20px); /* Chaque élément prend la moitié de l'espace */
+    text-align: center;
+}
+
+.specialty img {
+    width: 100%;
+    max-height: 250px; /* Ajuste la hauteur pour uniformiser */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ✅ Adapter les images pour mobile */
+@media screen and (max-width: 768px) {
+    .creations-container img,
+    .specialty {
+        width: 100%; /* Une seule image par ligne sur mobile */
+    }
+}
+
+/* ✅ Footer */
+.footer {
+    background-color: #f2e1f2;
+    padding: 15px 0;
+    color: #6a3d79;
+    text-align: center;
+}
+
+/* ✅ Footer : réduction de la taille des logos */
+.footer .footer-logo,
+.footer .footer-icon {
+    width: 25px; /* Plus petit */
+    height: auto;
+}
+
+/* ✅ Logo Instagram plus petit en bas de page */
+.social-media .instagram-logo {
+    width: 25px; /* Plus petit */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* ✅ Disposition en 3 colonnes */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* ✅ Liens du footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+.footer-links li {
+    margin: 3px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #6a3d79;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #8e44ad;
+}
+
+/* ✅ Responsive : ajustement sur mobiles */
+@media screen and (max-width: 600px) {
+    .nos-creations,
+    .nos-specialites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .specialite {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+   /* ✅ Style du header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2e1f2;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
 }
 
 /* ✅ Fond du site */
@@ -326,6 +660,13 @@ img {
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+}
+     text-align: center;
     }
 
     .footer-links {
