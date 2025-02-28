@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Afficher la section par défaut
     showTab('classique');
 
-    /** ✅ FORMULAIRE AVIS **/
+    document.addEventListener("DOMContentLoaded", function () {
     const avisForm = document.getElementById("avisForm");
-    const avisContainer = document.getElementById("avisContainer");
+    const avisContainer = document.getElementById("listeAvis"); // ✅ Corrigé
 
     if (avisForm && avisContainer) {
         console.log("Formulaire d'avis détecté.");
@@ -68,14 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 avisList.forEach(avis => {
                     const avisElement = document.createElement("div");
-                    avisElement.classList.add("avis");
+                    avisElement.classList.add("testimonial"); // ✅ Correspond à ton HTML
                     avisElement.innerHTML = `
-                        <p><strong>${avis.nom}</strong> (${avis.note}⭐)</p>
-                        <p>${avis.commentaire}</p>
+                        <p class="testimonial-text">${avis.commentaire}</p>
+                        <div class="testimonial-author">
+                            <span>${avis.nom}</span>
+                        </div>
+                        <div class="stars">${"⭐".repeat(avis.note)}</div>
                     `;
                     avisContainer.appendChild(avisElement);
                 });
             }
+            console.log("Avis affichés :", avisList);
         }
 
         afficherAvis();
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const nom = document.getElementById("nom").value.trim();
             const noteElement = document.querySelector('input[name="note"]:checked');
-            const note = noteElement ? noteElement.value : null;
+            const note = noteElement ? parseInt(noteElement.value) : null;
             const commentaire = document.getElementById("commentaire").value.trim();
 
             if (!nom || !note || !commentaire) {
